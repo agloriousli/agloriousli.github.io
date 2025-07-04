@@ -127,7 +127,7 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
             </a>
 
             <a
-              href="https://github.com/an-apple-in-a-tree"
+              href="https://github.com/agloriousli"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-gray-600 hover:text-purple-600 transition-all hover:scale-105 shadow-sm"
