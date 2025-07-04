@@ -6,6 +6,8 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    --section-bg: 240 100% 99%;
+    --section-bg-dark: 240 6% 10%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -29,6 +31,7 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+    --section-bg: var(--section-bg-dark);
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
@@ -55,6 +58,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  section {
+    background-color: hsl(var(--section-bg));
   }
 }
 

@@ -13,7 +13,7 @@ interface Experience {
 
 export default function ExperienceSection({ experiences }: { experiences: Experience[] }) {
   return (
-    <section id="experience" className="py-20" style={{ perspective: "1500px" }}>
+    <section id="experience" className="py-20 dark:bg-black/60" style={{ perspective: "1500px" }}>
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"

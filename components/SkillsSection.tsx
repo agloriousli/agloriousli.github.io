@@ -8,7 +8,7 @@ interface Skill {
 
 export default function SkillsSection({ skills }: { skills: Skill[] }) {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 dark:bg-black/60 ">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -34,8 +34,8 @@ export default function SkillsSection({ skills }: { skills: Skill[] }) {
               viewport={{ once: true }}
             >
               <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-800">{skill.name}</span>
-                <span className="text-gray-600 font-medium">{skill.level}%</span>
+                <span className="font-semibold text-gray-800 dark:text-gray-100">{skill.name}</span>
+                <span className="text-gray-600 font-medium dark:text-gray-200">{skill.level}%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                 <motion.div

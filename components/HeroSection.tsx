@@ -13,6 +13,35 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
 
+  // Typing animation for name
+  const fullName = "Gloria Li"
+  const [typedName, setTypedName] = useState("")
+  const [showCursor, setShowCursor] = useState(true)
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout
+    let cursorTimeout: NodeJS.Timeout
+    if (typedName.length < fullName.length) {
+      timeout = setTimeout(() => {
+        setTypedName(fullName.slice(0, typedName.length + 1))
+      }, 120)
+    } else {
+      // Blinking cursor, then disappear after 1s
+      const cursorInterval = setInterval(() => {
+        setShowCursor((c) => !c)
+      }, 500)
+      cursorTimeout = setTimeout(() => {
+        setShowCursor(false)
+        clearInterval(cursorInterval)
+      }, 2000)
+      return () => {
+        clearInterval(cursorInterval)
+        clearTimeout(cursorTimeout)
+      }
+    }
+    return () => clearTimeout(timeout)
+  }, [typedName, fullName])
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
@@ -23,13 +52,14 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="text-6xl md:text-8xl font-bold mb-6"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
-              Gloria Li
+              {typedName}
+              <span className="inline-block w-4" style={{ opacity: showCursor ? 1 : 0 }}>|</span>
             </span>
           </motion.h1>
 
@@ -39,10 +69,37 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <p className="text-xl md:text-2xl text-gray-600 font-medium">SE @ University of Waterloo • Class of 2030</p>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              Welcome to my portfolio, it is currently under construction...
-            </p>
+            <div className="relative inline-block w-full max-w-xl mx-auto">
+              <div className="bg-white/30 backdrop-blur-md rounded-2xl px-8 py-6 shadow-lg border border-white/40">
+                <p
+                  className="text-xl md:text-2xl font-medium text-purple-700 dark:text-purple-200"
+                  style={{
+                    textShadow: '0 2px 8px rgba(124,58,237,0.18), 0 1px 0 #fff',
+                    transform: 'perspective(400px) rotateX(8deg)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  SE @ University of Waterloo • Class of 2030
+                </p>
+                <span
+                  className="block h-1 w-3/4 mx-auto mt-2 rounded-full"
+                  style={{
+                    background: 'linear-gradient(90deg, #a78bfa 0%, #f472b6 100%)',
+                    filter: 'blur(1px)',
+                  }}
+                />
+                <p
+                  className="text-lg max-w-3xl mx-auto leading-relaxed mt-4 text-gray-600 dark:text-gray-200"
+                  style={{
+                    textShadow: '0 2px 12px rgba(236,72,153,0.10), 0 1px 0 #fff',
+                    transform: 'perspective(400px) rotateX(6deg)',
+                    fontWeight: 500,
+                  }}
+                >
+                  Welcome to my portfolio, it is currently under construction...
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

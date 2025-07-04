@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin } from "lucide-react"
 export default function FooterSection() {
   return (
     <footer
-        className="py-12 border-t border-purple-100 text-center text-gray-600 bg-white/60 backdrop-blur-sm"
+        className="py-12 border-t border-purple-100 text-center text-gray-600 bg-white/60 dark:bg-black/60 backdrop-blur-sm"
         style={{ perspective: "1000px" }}
       >
         <div className="max-w-6xl mx-auto px-6">

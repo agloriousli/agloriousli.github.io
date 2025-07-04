@@ -12,7 +12,7 @@ interface AwardType {
 
 export default function AwardsSection({ awards }: { awards: AwardType[] }) {
   return (
-    <section id="awards" className="py-20 bg-white/30 backdrop-blur-sm">
+    <section id="awards" className="py-20 bg-white dark:bg-black backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"

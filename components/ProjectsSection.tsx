@@ -14,7 +14,7 @@ interface Project {
 
 export default function ProjectsSection({ projects }: { projects: Project[] }) {
   return (
-    <section id="projects" className="py-20 bg-white/30 backdrop-blur-sm">
+    <section id="projects" className="py-20 bg-white/30 dark:bg-black/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -40,7 +40,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 overflow-hidden">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white backdrop-blur-sm border-0 overflow-hidden">
                 <div className={`h-2 bg-gradient-to-r ${project.color}`} />
                 <CardHeader>
                   <CardTitle className="text-lg text-gray-800 flex items-center gap-2">

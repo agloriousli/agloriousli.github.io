@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react"
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white/30 backdrop-blur-sm">
+    <section id="about" className="py-20 bg-white/30 dark:bg-black/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -35,16 +35,16 @@ export default function AboutSection() {
             <div className="flex items-center gap-3 mb-6">
               <GraduationCap className="w-6 h-6 text-purple-600" />
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">University of Waterloo</h3>
-                <p className="text-gray-600">Bachelor's of Engineering in Software Engineering</p>
-                <p className="text-sm text-gray-500">September 2025 – May 2030</p>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">University of Waterloo</h3>
+                <p className="text-gray-600 dark:text-gray-100">Bachelor's of Engineering in Software Engineering</p>
+                <p className="text-sm text-gray-500 dark:text-gray-200">September 2025 – May 2030</p>
               </div>
             </div>
 
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-100 leading-relaxed">
               I like to build tools that help people live better lives, drawing inspiration from my experiences and local community.</p>
 
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-100 leading-relaxed">
               When I'm not coding, you'll find me competing in hackathons/STEM olympiads, contributing to open-source
               projects, or exploring the latest developments in artificial intelligence.
             </p>
@@ -52,11 +52,11 @@ export default function AboutSection() {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-gray-700">Available for internships</span>
+                <span className="text-gray-700 dark:text-gray-100">Available for internships</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <span className="text-gray-700">Open to collaboration</span>
+                <span className="text-gray-700 dark:text-gray-100">Open to collaboration</span>
               </div>
             </div>
           </motion.div>
