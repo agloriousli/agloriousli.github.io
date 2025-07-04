@@ -19,7 +19,7 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Gloria Li
+            An Indie Developer
           </motion.div>
           <div className="hidden md:flex space-x-8">
             {["home", "about", "experience", "projects", "skills", "awards", "contact"].map((section) => (

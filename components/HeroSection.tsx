@@ -29,7 +29,7 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
-              An Indie Developer
+              Gloria Li
             </span>
           </motion.h1>
 
@@ -41,7 +41,7 @@ export default function HeroSection({ isVisible, activeSection, scrollToSection 
           >
             <p className="text-xl md:text-2xl text-gray-600 font-medium">SE @ University of Waterloo • Class of 2030</p>
             <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              Welcome to my portfolio, it is currently being updated..
+              Welcome to my portfolio, it is currently under construction...
             </p>
           </motion.div>
 
