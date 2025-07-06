@@ -144,7 +144,7 @@ export default function Portfolio() {
       <ExperienceSection experiences={experiences} />
       <ProjectsSection projects={projects} />
       <SkillsSection skills={skills} />
-      <AwardsSection awards={awards} />
+      {/* <AwardsSection awards={awards} /> */}
       <ContactSection />
       <FooterSection />
     </>

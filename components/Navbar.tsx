@@ -32,7 +32,7 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
             @agloriousli
           </motion.div>
           <div className="hidden md:flex space-x-8 items-center">
-            {["home", "about", "experience", "projects", "skills", "awards", "contact"].map((section) => (
+            {["home", "about", "experience", "projects", "skills", "contact"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
